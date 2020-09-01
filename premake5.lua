@@ -17,7 +17,8 @@ project "Test_prj"
 	cppdialect "C++17"
 
 	includedirs { "glfw/include/" }
-	links{ "glfw" }
+	libdirs { "bin/" .. outputdir .. "/glfw" }
+	links{ "glfw.lib" }
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-obj/" .. outputdir .. "/%{prj.name}")
